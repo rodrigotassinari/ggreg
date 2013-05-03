@@ -2,6 +2,7 @@ language: ruby
 rvm:
   - 2.0.0
 script:
+  - cp config/application.example.yml config/application.yml
   - RAILS_ENV=test bundle exec rake --trace db:schema:load
   - RAILS_ENV=test bundle exec rake --trace spec
 before_script:
