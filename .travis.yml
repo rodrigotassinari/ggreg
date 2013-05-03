@@ -1,5 +1,10 @@
 language: ruby
 rvm:
   - 2.0.0
+env:
+  - DB=postgresql
+script:
+  - RAILS_ENV=test bundle exec rake --trace db:schema:load
+  - RAILS_ENV=test bundle exec rake --trace spec
 before_script:
   - psql -c 'create database ggreg_test;' -U postgres
