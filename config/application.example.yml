@@ -3,11 +3,11 @@
 #
 # Important: all values must be strings only.
 development:
-  secret_token: "some development token" # generate one via rake secret
+  secret_token: "some_development_token" # generate one via rake secret
   mailer_host: "localhost:3000"
 test:
-  secret_token: "some test token" # generate one via rake secret
+  secret_token: "some_test_token" # generate one via rake secret
   mailer_host: "test.local"
 production:
-  secret_token: "some production token" # generate one via rake secret
+  secret_token: "some_production_token" # generate one via rake secret
   mailer_host: "mywebsite.com"
