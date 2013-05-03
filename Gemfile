@@ -17,7 +17,7 @@ group :assets do
   # gem 'compass-rails', '~> 1.0.3'
   gem 'sass-rails',   '~> 3.2.3'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  gem 'therubyracer', :platforms => :ruby
+  gem 'therubyracer', platforms: :ruby
   gem 'uglifier', '~> 2.0.1'
   gem 'yui-compressor', '~> 0.9.6'
   gem 'zurb-foundation', '~> 4.1.5'
@@ -32,11 +32,12 @@ group :development do
 end
 
 group :test do
-  gem 'simplecov', '~> 0.7', :require => false
+  gem 'simplecov', '~> 0.7', require: false
 end
 
 group :development, :test do
   gem 'awesome_print', '~> 1.1'
+  gem 'coveralls', '~> 0.6', require: false
   gem 'factory_girl_rails', '~> 4.2'
   gem 'fakeweb', '~> 1.3'
   gem 'pry', '~> 0.9'
