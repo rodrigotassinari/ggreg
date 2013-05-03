@@ -3,11 +3,31 @@
 #
 # Important: all values must be strings only.
 development:
-  secret_token: "some_development_token" # generate one via rake secret
-  mailer_host: "localhost:3000"
+  secret_token: 'some_development_token' # generate one via rake secret
+  mailer_host: 'localhost:3000'
+  service_twitter: 'enabled'
+  twitter_consumer_key: 'your_twitter_consumer_key'
+  twitter_consumer_secret: 'your_twitter_consumer_secret'
+  twitter_oauth_token: 'your_twitter_oauth_token'
+  twitter_oauth_token_secret: 'your_twitter_oauth_token_secret'
+  twitter_screen_name: 'your_twitter_login'
+
 test:
-  secret_token: "some_test_token" # generate one via rake secret
-  mailer_host: "test.local"
+  secret_token: 'some_test_token' # generate one via rake secret
+  mailer_host: 'test.local'
+  service_twitter: 'enabled'
+  twitter_consumer_key: 'your_twitter_consumer_key'
+  twitter_consumer_secret: 'your_twitter_consumer_secret'
+  twitter_oauth_token: 'your_twitter_oauth_token'
+  twitter_oauth_token_secret: 'your_twitter_oauth_token_secret'
+  twitter_screen_name: 'your_twitter_login'
+
 production:
-  secret_token: "some_production_token" # generate one via rake secret
-  mailer_host: "mywebsite.com"
+  secret_token: 'some_production_token' # generate one via rake secret
+  mailer_host: 'mywebsite.com'
+  service_twitter: 'enabled'
+  twitter_consumer_key: 'your_twitter_consumer_key'
+  twitter_consumer_secret: 'your_twitter_consumer_secret'
+  twitter_oauth_token: 'your_twitter_oauth_token'
+  twitter_oauth_token_secret: 'your_twitter_oauth_token_secret'
+  twitter_screen_name: 'your_twitter_login'

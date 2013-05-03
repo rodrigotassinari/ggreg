@@ -5,6 +5,7 @@ gem 'jquery-rails', '2.2.1'
 gem 'pg', '0.15.1'
 gem 'rails', '3.2.13'
 gem 'rake', '10.0.4'
+gem 'twitter', '4.6.2'
 gem 'unicorn', '4.6.2'
 
 # To use Jbuilder templates for JSON
