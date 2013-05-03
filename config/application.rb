@@ -15,6 +15,13 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+# see: http://railscasts.com/episodes/85-yaml-configuration-revised
+config = YAML.load(File.read(File.expand_path('../application.yml', __FILE__)))
+config.merge! config.fetch(Rails.env, {})
+config.each do |key, value|
+  ENV["GGREG_#{key.to_s.upcase}"] = value.to_s unless value.kind_of? Hash
+end
+
 module Ggreg
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -64,5 +71,7 @@ module Ggreg
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    config.action_mailer.default_url_options = {host: ENV['GGREG_MAILER_HOST']}
   end
 end

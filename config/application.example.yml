@@ -1,0 +1,13 @@
+# All values put here will be available via ENV, prefixed by 'GGREG_'. for
+# example ENV['GGREG_SECRET_TOKEN'] and ENV['GGREG_MAILER_HOST'].
+#
+# Important: all values must be strings only.
+development:
+  secret_token: "some development token" # generate one via rake secret
+  mailer_host: "localhost:3000"
+test:
+  secret_token: "some test token" # generate one via rake secret
+  mailer_host: "test.local"
+production:
+  secret_token: "some production token" # generate one via rake secret
+  mailer_host: "mywebsite.com"

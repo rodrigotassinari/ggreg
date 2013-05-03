@@ -28,3 +28,4 @@ rerun.txt
 pickle-email-*.html
 .DS_Store
 /.rvmrc
+config/application.yml
