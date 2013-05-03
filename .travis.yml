@@ -4,6 +4,6 @@ rvm:
 script:
   - cp config/application.example.yml config/application.yml
   - RAILS_ENV=test bundle exec rake --trace db:schema:load
-  - RAILS_ENV=test bundle exec rake --trace spec
+  - RAILS_ENV=test bundle exec rake --trace spec:i18n
 before_script:
   - psql -c 'create database ggreg_test;' -U postgres
