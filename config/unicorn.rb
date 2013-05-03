@@ -1,6 +1,6 @@
 # encoding: utf-8
-worker_processes Integer(ENV["UNICORN_WORKERS"] || 3)
-timeout 15
+worker_processes Integer(ENV['UNICORN_CONCURRENCY'] || 3)
+timeout Integer(ENV['UNICORN_TIMEOUT'] || 15)
 preload_app true
 
 before_fork do |server, worker|
