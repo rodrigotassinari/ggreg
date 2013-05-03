@@ -9,18 +9,12 @@ VCR.configure do |c|
   c.configure_rspec_metadata!
 end
 
-RSpec.configure do |config|
-
-  # so we can use `:vcr` rather than `:vcr => true`;
-  # in RSpec 3 this will no longer be necessary.
-  config.treat_symbols_as_metadata_keys_with_true_values = true
-
-  # Enable VCR for tests with :vcr => true
-  config.around(:each, :vcr => true) do |example|
-    name = example.metadata[:full_description].gsub(/\W+/, "_").split("_", 2).join("/").underscore
-    VCR.use_cassette(name, :record => :new_episodes) do
-      example.call
-    end
-  end
-
-end
+# RSpec.configure do |config|
+#   # Enable VCR for tests with :vcr => true
+#   config.around(:each, :vcr => true) do |example|
+#     name = example.metadata[:full_description].gsub(/\W+/, "_").split("_", 2).join("/").underscore
+#     VCR.use_cassette(name, :record => :new_episodes) do
+#       example.call
+#     end
+#   end
+# end
