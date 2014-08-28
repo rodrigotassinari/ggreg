@@ -1,10 +1,19 @@
 language: ruby
-bundler_args: --without development
+bundler_args: "--without development"
 rvm:
   - 2.1.2
+env:
+  global:
+    - SECRET_KEY_BASE=ggreg-test-key
+    - APP_HOST=test.host
+    # CODECLIMATE_REPO_TOKEN
+    secure: "brz75XcT9418hOFQyYpMUrX6SegmHdJnUy3ox0BBcWRccpF1MIAOnP5bATvj9jbkc81TWGNdbraFDN7UUDJG59pP8ZoHp4UIdmKBGazLZl0RSaGcSFR8z7M9p6Bbka8QqoRD+Z2oX/2e80JYPv6xT9IbHVLzMOUcqbaG5hRhxv4="
 script:
-  - cp config/application.example.yml config/application.yml
   - RAILS_ENV=test bundle exec rake --trace db:schema:load
   - RAILS_ENV=test bundle exec rake --trace spec
 before_script:
   - psql -c 'create database ggreg_test;' -U postgres
+services:
+  - redis-server
+addons:
+  postgresql: "9.3"

@@ -1,0 +1,18 @@
+en:
+  activerecord:
+    models:
+      user:
+        one: 'User'
+        other: 'Users'
+    attributes:
+      user:
+        email: 'Email'
+        created_at: 'Created at'
+        updated_at: 'Updated at'
+    # errors:
+    #   models:
+    #     user:
+    #       blank: "can't be blank"
+    #       attributes:
+    #         email:
+    #           invalid: 'is not a valid email address'
