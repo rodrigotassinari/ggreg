@@ -7,12 +7,13 @@ en:
     attributes:
       user:
         email: 'Email'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
         created_at: 'Created at'
         updated_at: 'Updated at'
-    # errors:
-    #   models:
-    #     user:
-    #       blank: "can't be blank"
-    #       attributes:
-    #         email:
-    #           invalid: 'is not a valid email address'
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              invalid: 'is not a valid email address'

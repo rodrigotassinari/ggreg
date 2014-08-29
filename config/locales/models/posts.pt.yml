@@ -1,0 +1,12 @@
+en:
+  activerecord:
+    models:
+      post:
+        one: 'Publicação'
+        other: 'Publicações'
+    attributes:
+      post:
+        title: 'Título'
+        piblished_at: 'Publicada em'
+        created_at: 'Criada em'
+        updated_at: 'Atualizada em'

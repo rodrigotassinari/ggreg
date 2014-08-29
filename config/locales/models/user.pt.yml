@@ -7,12 +7,13 @@ pt:
     attributes:
       user:
         email: 'Email'
+        password: 'Senha'
+        password_confirmation: 'Senha (confirmação)'
         created_at: 'Criado em'
         updated_at: 'Atualizado em'
-    # errors:
-    #   models:
-    #     user:
-    #       blank: 'não pode ficar em branco'
-    #       attributes:
-    #         email:
-    #           invalid: 'não é um endereço de email válido'
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              invalid: 'não é um endereço de email válido'

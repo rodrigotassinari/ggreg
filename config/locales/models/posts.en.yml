@@ -1,0 +1,12 @@
+en:
+  activerecord:
+    models:
+      post:
+        one: 'Post'
+        other: 'Posts'
+    attributes:
+      post:
+        title: 'Title'
+        piblished_at: 'Published at'
+        created_at: 'Created at'
+        updated_at: 'Updated at'
