@@ -1,23 +1,50 @@
 # ggreg
 
+Aggregates several public stuff you post online in a single searchable and subscribable (via RSS) timeline.
+
 [![Code Climate](https://codeclimate.com/github/rtopitt/ggreg.png)](https://codeclimate.com/github/rtopitt/ggreg)
 [![Build Status](https://travis-ci.org/rtopitt/ggreg.png?branch=master)](https://travis-ci.org/rtopitt/ggreg)
 [![Coverage Status](https://coveralls.io/repos/rtopitt/ggreg/badge.png?branch=master)](https://coveralls.io/r/rtopitt/ggreg)
 
-Aggregates several public stuff you post online in a single searchable and subscribable (via RSS) timeline.
+**EXTREMELY ALPHA SOFTWARE!**, work in progress.
 
-**EXTREMELY ALPHA SOFTWARE!** **WIP**
+## Running on development
 
-## Setup:
+You will need:
 
-TODO
+- Ruby 2.1+
+- PostgreSQL 9.3+
+- Redis 2.8+
 
-## Running:
+Clone the repo and create a `.env` file with values for your environment (use `.env.example` as a starting point, changing the values where needed).
 
-```bash
+Next run the standard Rails app setup:
+
+```
+$ bundle install
+$ bundle exec rake db:setup
+```
+
+To start the app, run:
+
+```
 $ bin/foreman start
 ```
 
-## Testing:
+## Testing
 
-TODO
+Simply run:
+
+```
+$ bin/rspec
+```
+
+## Contributing
+
+Fork this repo, make your changes on your fork in a topic branch and submit a pull request against this repo's master branch.
+
+Please write all code, comments, tests and commit messages in english. Use 2 spaces to indent code and follow idiomatic Ruby as close as possible. No CoffeeScript, please.
+
+## License
+
+This project is open source and licensed under the terms of the MIT License. See `LICENSE` for more information.
