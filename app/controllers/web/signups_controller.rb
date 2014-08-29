@@ -1,5 +1,6 @@
 class Web::SignupsController < BaseWebController
 
+  skip_before_action :require_initial_setup
   before_action :abort_if_already_signed_up
 
   # GET /signup
