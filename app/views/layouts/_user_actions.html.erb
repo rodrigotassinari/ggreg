@@ -1,0 +1,8 @@
+<% if true %>
+  <p><%= link_to t('.login'), '#TODO' %></p>
+<% else %>
+  <p>
+    <%= t('.logged_in_as', user: 'Fulano') %> |
+    <%= link_to t('.logout'), '#TODO' %>
+  </p>
+<% end %>

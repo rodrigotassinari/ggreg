@@ -1,0 +1,6 @@
+pt:
+  layouts:
+    user_actions:
+      login: 'Entrar'
+      logged_in_as: 'Logado como %{user}'
+      logout: 'Sair'

@@ -1,0 +1,8 @@
+pt:
+  web:
+    signups:
+      new:
+        title: 'Cadastre-se'
+        already_signed_up: 'Cadastro já efetuado'
+      create:
+        success: 'Cadastrado com sucesso'

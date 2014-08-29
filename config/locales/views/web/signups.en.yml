@@ -1,0 +1,8 @@
+en:
+  web:
+    signups:
+      new:
+        title: 'Sign up'
+        already_signed_up: 'Already signed up'
+      create:
+        success: 'Signed up successfully'

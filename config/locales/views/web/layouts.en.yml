@@ -1,0 +1,6 @@
+en:
+  layouts:
+    user_actions:
+      login: 'Login'
+      logged_in_as: 'Logged in as %{user}'
+      logout: 'Logout'

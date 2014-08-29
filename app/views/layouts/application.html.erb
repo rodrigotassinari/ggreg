@@ -20,7 +20,8 @@
     </div>
     <div class="footer">
       <hr />
-      <%= app_name %>, powered by <%= link_to 'ggreg', 'https://github.com/rtopitt/ggreg' %>
+      <%= render partial: 'layouts/user_actions' %>
+      <p><%= app_name %>, powered by <%= link_to 'ggreg', 'https://github.com/rtopitt/ggreg' %></p>
     </div>
   </body>
 </html>
