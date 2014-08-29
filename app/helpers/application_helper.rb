@@ -1,7 +1,7 @@
 module ApplicationHelper
 
   def app_name
-    ENV['APP_NAME'] || 'GGreg'
+    ENV['APP_NAME'] || 'ggreg'
   end
 
   def title
