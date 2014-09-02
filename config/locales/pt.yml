@@ -1,2 +1,4 @@
 pt:
   hello: 'Olá Mundo'
+  submit: 'Enviar'
+  submitting: 'Enviando...'

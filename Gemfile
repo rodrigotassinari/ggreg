@@ -13,6 +13,7 @@ gem 'jbuilder', '2.1.3'
 gem 'unicorn', '4.8.3'
 gem 'bcrypt', '3.1.7'
 gem 'http_accept_language', '2.0.2'
+gem 'simple_form', '3.0.2'
 
 group :development, :production do
   gem 'rails_stdout_logging', '0.0.3'
