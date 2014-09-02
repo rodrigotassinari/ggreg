@@ -1,0 +1,39 @@
+class Session
+  include ActiveModel::Model
+
+  attr_accessor :email, :password
+  attr_reader :http_session, :user
+
+  validates :email, presence: true, format: {with: /.+@.+\..+/i, allow_blank: true}
+
+  validates :password, presence: true
+
+  # validates :user, presence: true
+
+  def initialize(params, http_session, user_class=User)
+    @email = params[:email].to_s.downcase
+    @password = params[:password].to_s
+    @http_session = http_session
+    @user = user_class.find_by(email: email)
+  end
+
+  def authenticate
+    return false unless valid?
+    user_exists? && correct_password? # && save
+  end
+
+  def persisted?
+    false
+  end
+
+  private
+
+  def user_exists?
+    !user.nil?
+  end
+
+  def correct_password?
+    user.authenticate(password)
+  end
+
+end

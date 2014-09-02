@@ -1,0 +1,8 @@
+<% content_for(:title) { t('.title') } %>
+<h2><%= t('.title') %></h2>
+
+<%= simple_form_for @session, url: login_path, method: :post do |f| %>
+  <%= f.input :email, as: :email, autofocus: true, required: true, input_html: {maxlength: 255, size: 80} %>
+  <%= f.input :password, as: :password, required: true, input_html: {maxlength: 255, size: 40} %>
+  <%= f.button :submit, t('submit'), data: {disable_with: t('submitting')} %>
+<% end %>

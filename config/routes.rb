@@ -4,6 +4,9 @@ Rails.application.routes.draw do
     resources :posts
     get 'signup' => 'signups#new', as: 'signup'
     post 'signup' => 'signups#create'
+    get 'login' => 'sessions#new', as: 'login'
+    post 'login' => 'sessions#create'
+    get 'logout' => 'sessions#destroy', as: 'logout'
     root 'posts#index'
   end
 

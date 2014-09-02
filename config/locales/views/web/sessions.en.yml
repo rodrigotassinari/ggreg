@@ -1,0 +1,9 @@
+en:
+  web:
+    sessions:
+      new:
+        title: 'Log in'
+      create:
+        success: 'Welcome back, %{name}'
+      destroy:
+        success: 'Logged out successfully'

@@ -1,0 +1,16 @@
+en:
+  activemodel:
+    models:
+      session:
+        one: 'Session'
+        other: 'Sessions'
+    attributes:
+      session:
+        email: 'Email'
+        password: 'Password'
+    errors:
+      models:
+        session:
+          attributes:
+            email:
+              invalid: 'is not a valid email address'

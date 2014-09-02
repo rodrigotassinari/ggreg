@@ -1,0 +1,9 @@
+pt:
+  web:
+    sessions:
+      new:
+        title: 'Entrar'
+      create:
+        success: 'Bem vindo de volta, %{name}'
+      destroy:
+        success: 'Deslogado com sucesso'
