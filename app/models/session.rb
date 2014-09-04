@@ -36,4 +36,15 @@ class Session
     user.authenticate(password)
   end
 
+  private
+
+  # taken from https://github.com/rails/rails/blob/ce148025f221b75c82020782a5adef58a07de98c/actionpack/lib/action_dispatch/http/request.rb#L255
+  def reset_session
+    if http_session && http_session.respond_to?(:destroy)
+      http_session.destroy
+    else
+      http_session = {}
+    end
+  end
+
 end
