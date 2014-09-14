@@ -1,8 +1,8 @@
 class Session
   include ActiveModel::Model
 
-  attr_accessor :email, :password
-  attr_reader :http_session, :user
+  attr_accessor :email, :password, :http_session
+  attr_reader :user
 
   validates :email, presence: true, format: {with: /.+@.+\..+/i, allow_blank: true}
 
@@ -19,7 +19,9 @@ class Session
 
   def authenticate
     return false unless valid?
-    user_exists? && correct_password? # && save
+    user_exists? &&
+      correct_password? &&
+      write
   end
 
   def persisted?
@@ -27,6 +29,12 @@ class Session
   end
 
   private
+
+  def write
+    reset_session
+    http_session[:user_id] = user.id
+    true
+  end
 
   def user_exists?
     !user.nil?
