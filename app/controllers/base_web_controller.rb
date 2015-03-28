@@ -6,7 +6,7 @@ class BaseWebController < ApplicationController
 
   # before_action
   def require_initial_setup
-    redirect_to signup_path and return unless User.any?
+    redirect_to web_signup_path and return unless User.any?
   end
 
 end

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  namespace :web, path: '', as: '' do
+  namespace :web, path: nil, as: 'web' do
     resources :posts
     get 'signup' => 'signups#new', as: 'signup'
     post 'signup' => 'signups#create'

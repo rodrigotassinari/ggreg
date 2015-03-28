@@ -29,7 +29,7 @@ describe BaseWebController do
       before(:each) { expect(User).to receive(:any?).and_return(false) }
       it 'redirects to the setup page' do
         get :index
-        expect(response).to redirect_to(signup_path)
+        expect(response).to redirect_to(web_signup_path)
       end
     end
   end

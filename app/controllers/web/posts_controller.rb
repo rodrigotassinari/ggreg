@@ -1,7 +1,7 @@
 class Web::PostsController < BaseWebController
 
   # GET /posts
-  # posts_path
+  # web_posts_path
   def index
   end
 
@@ -11,12 +11,12 @@ class Web::PostsController < BaseWebController
   end
 
   # POST /posts
-  # posts_path
+  # web_posts_path
   def create
   end
 
   # GET /posts/:id
-  # post_path(:id)
+  # web_post_path(:id)
   def show
   end
 
@@ -27,12 +27,12 @@ class Web::PostsController < BaseWebController
 
   # PUT /posts/:id
   # PATCH /posts/:id
-  # post_path(:id)
+  # web_post_path(:id)
   def update
   end
 
   # DELETE /posts/:id
-  # post_path(:id)
+  # web_post_path(:id)
   def destroy
   end
 

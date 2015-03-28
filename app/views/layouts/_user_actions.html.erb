@@ -1,8 +1,8 @@
 <% if true %>
-  <p><%= link_to t('.login'), login_path %></p>
+  <p><%= link_to t('.login'), web_login_path %></p>
 <% else %>
   <p>
     <%= t('.logged_in_as', user: 'Fulano') %> |
-    <%= link_to t('.logout'), logout_path %>
+    <%= link_to t('.logout'), web_logout_path %>
   </p>
 <% end %>

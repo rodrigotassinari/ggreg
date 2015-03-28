@@ -4,18 +4,18 @@ class Web::SignupsController < BaseWebController
   before_action :abort_if_already_signed_up
 
   # GET /signup
-  # signup_path
+  # web_signup_path
   def new
     @user = User.new
   end
 
   # POST /signup
-  # signup_path
+  # web_signup_path
   def create
     @user = User.new(user_params)
     if @user.save
       flash[:success] = t('.success')
-      redirect_to root_path
+      redirect_to web_root_path
     else
       render :new
     end
@@ -31,7 +31,7 @@ class Web::SignupsController < BaseWebController
   def abort_if_already_signed_up
     if User.any?
       flash[:error] = t('.already_signed_up')
-      redirect_to root_path
+      redirect_to web_root_path
     end
   end
 

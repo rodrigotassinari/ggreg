@@ -20,7 +20,7 @@ describe Web::SignupsController, type: :controller do
         expect(User).to receive(:any?).and_return(true)
         get :new
         expect(flash[:error]).to_not be_empty
-        expect(response).to redirect_to(root_path)
+        expect(response).to redirect_to(web_root_path)
       end
     end
   end
@@ -37,7 +37,7 @@ describe Web::SignupsController, type: :controller do
         it 'redirects to the root path with a success message' do
           post :create, params
           expect(flash[:success]).to_not be_empty
-          expect(response).to redirect_to(root_path)
+          expect(response).to redirect_to(web_root_path)
         end
       end
       context 'with invalid params' do
@@ -62,7 +62,7 @@ describe Web::SignupsController, type: :controller do
       it 'redirects to the root page with an error' do
         expect(User).to receive(:any?).and_return(true)
         post :create
-        expect(response).to redirect_to(root_path)
+        expect(response).to redirect_to(web_root_path)
         expect(flash[:error]).to_not be_empty
       end
     end

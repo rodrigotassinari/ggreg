@@ -1,25 +1,25 @@
 class Web::SessionsController < BaseWebController
 
   # GET /login
-  # login_path
+  # web_login_path
   def new
     @session = Session.new({}, session)
   end
 
   # POST /login
-  # login_path
+  # web_login_path
   def create
     @session = Session.new(session_params, session)
     if @session.authenticate
       flash[:success] = t('.success')
-      redirect_to root_path
+      redirect_to web_root_path
     else
       render :new
     end
   end
 
   # GET /logout
-  # logout_path
+  # web_logout_path
   def destroy
     # TODO
   end
