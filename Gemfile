@@ -27,8 +27,6 @@ group :development, :test do
   gem 'database_cleaner', '~> 1.4'
   gem 'pry-byebug', '~> 3.1'
   gem 'pry-remote', '~> 0.1'
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.1'
 end
 
 group :development do
@@ -37,6 +35,9 @@ group :development do
   gem 'foreman', '~> 0.78'
   gem 'better_errors', '~> 2.1'
   gem 'binding_of_caller', '~> 0.7'
+  gem 'meta_request', '~> 0.3'
+  gem 'quiet_assets', '~> 1.1'
+  gem 'bullet', '~> 4.14'
 end
 
 group :test do
