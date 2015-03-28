@@ -14,6 +14,7 @@ gem 'unicorn', '4.8.3'
 gem 'bcrypt', '3.1.10'
 gem 'http_accept_language', '2.0.5'
 gem 'simple_form', '3.1.0'
+gem 'rails-env', '0.3.0'
 
 group :development, :production do
   gem 'rails_stdout_logging', '0.0.3'
