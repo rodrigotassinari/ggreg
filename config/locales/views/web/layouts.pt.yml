@@ -1,6 +1,7 @@
 pt:
   layouts:
     user_actions:
-      login: 'Entrar'
+      admin_integrations: 'Admin: Integrações'
       logged_in_as: 'Logado como %{user}'
+      login: 'Entrar'
       logout: 'Sair'

@@ -6,7 +6,7 @@ class BaseApiController < ApplicationController
 
   # before_action
   def require_initial_setup
-    render(json: {errors: {message: 'Initial setup not done yet.'}}, status: 418) and return unless User.any?
+    render(json: {errors: {message: 'Initial setup has not been done yet.'}}, status: 418) and return unless User.any?
   end
 
 end

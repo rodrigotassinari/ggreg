@@ -1,5 +1,8 @@
 class Web::SessionsController < BaseWebController
 
+  before_action :require_logout, only: [:new, :create]
+  before_action :require_login, only: [:destroy]
+
   # GET /login
   # web_login_path
   def new
@@ -11,7 +14,7 @@ class Web::SessionsController < BaseWebController
   def create
     @session = Session.new(session_params, session)
     if @session.authenticate
-      flash[:success] = t('.success')
+      flash[:success] = t('.success', name: @session.user.email)
       redirect_to web_root_path
     else
       render :new
@@ -20,8 +23,11 @@ class Web::SessionsController < BaseWebController
 
   # GET /logout
   # web_logout_path
+  # TODO spec
   def destroy
-    # TODO
+    Session.destroy(session)
+    flash[:notice] = t('.success')
+    redirect_to web_root_path
   end
 
   private

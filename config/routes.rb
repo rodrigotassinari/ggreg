@@ -1,12 +1,19 @@
 Rails.application.routes.draw do
 
   namespace :web, path: nil, as: 'web' do
-    resources :posts
+
     get 'signup' => 'signups#new', as: 'signup'
     post 'signup' => 'signups#create'
     get 'login' => 'sessions#new', as: 'login'
     post 'login' => 'sessions#create'
     get 'logout' => 'sessions#destroy', as: 'logout'
+
+    resources :posts
+
+    namespace :admin, path: 'admin', as: 'admin' do
+      resources :integrations
+    end
+
     root 'posts#index'
   end
 

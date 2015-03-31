@@ -24,6 +24,24 @@ class Session
       write
   end
 
+  # TODO spec
+  def self.authenticated_user(http_session)
+    return nil if http_session[:user_id].blank?
+    User.find_by_id(http_session[:user_id])
+  end
+
+  # TODO spec
+  def self.authenticated?(http_session)
+    !authenticated_user(http_session).nil?
+  end
+
+  # TODO spec
+  def self.destroy(http_session)
+    http_session[:user_id] = nil
+    http_session.destroy if http_session.respond_to?(:destroy)
+    true
+  end
+
   def persisted?
     false
   end

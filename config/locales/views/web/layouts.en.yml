@@ -1,6 +1,7 @@
 en:
   layouts:
     user_actions:
-      login: 'Login'
+      admin_integrations: 'Admin: Integrations'
       logged_in_as: 'Logged in as %{user}'
+      login: 'Login'
       logout: 'Logout'
