@@ -2,6 +2,10 @@
 
 FactoryGirl.define do
   factory :twitter_integration do
-    configuration '{"consumer_key": "ck","consumer_secret": "cs","access_token": "at","access_token_secret": "ats"}'
+    # configuration '{"consumer_key": "ck","consumer_secret": "cs","access_token": "at","access_token_secret": "ats"}'
+    consumer_key "ck"
+    consumer_secret "cs"
+    access_token "at"
+    access_token_secret "ats"
   end
 end
