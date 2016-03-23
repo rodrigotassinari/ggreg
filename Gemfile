@@ -11,11 +11,13 @@ gem 'jquery-rails', '4.1.1'
 gem 'jquery-ui-rails', '5.0.5'
 gem 'turbolinks', '2.5.3'
 gem 'jbuilder', '2.4.1'
-gem 'unicorn', '5.0.1'
 gem 'bcrypt', '3.1.11'
 gem 'http_accept_language', '2.0.5'
 gem 'simple_form', '3.2.1'
 gem 'rails-env', '1.0.6'
+
+# Use Puma as the app server
+gem 'puma', '~> 3.2'
 
 group :development, :production do
   gem 'rails_stdout_logging', '0.0.5'
