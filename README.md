@@ -2,9 +2,9 @@
 
 Aggregates several public stuff you post online in a single searchable and subscribable (via RSS) timeline.
 
-[![Code Climate](https://codeclimate.com/github/rtopitt/ggreg.png)](https://codeclimate.com/github/rtopitt/ggreg)
-[![Build Status](https://travis-ci.org/rtopitt/ggreg.png?branch=master)](https://travis-ci.org/rtopitt/ggreg)
-[![Coverage Status](https://coveralls.io/repos/rtopitt/ggreg/badge.png?branch=master)](https://coveralls.io/r/rtopitt/ggreg)
+[![Code Climate](https://codeclimate.com/github/rodrigotassinari/ggreg.png)](https://codeclimate.com/github/rodrigotassinari/ggreg)
+[![Build Status](https://travis-ci.org/rodrigotassinari/ggreg.png?branch=master)](https://travis-ci.org/rodrigotassinari/ggreg)
+[![Coverage Status](https://coveralls.io/repos/rodrigotassinari/ggreg/badge.png?branch=master)](https://coveralls.io/r/rodrigotassinari/ggreg)
 
 **EXTREMELY ALPHA SOFTWARE!**, work in progress.
 
