@@ -1,4 +1,4 @@
-Rails.env.on(:development) do |config|
+Rails.env.on(:development) do
   # https://github.com/flyerhzm/bullet
   config.after_initialize do
     Bullet.enable = true # enable Bullet gem, otherwise do nothing

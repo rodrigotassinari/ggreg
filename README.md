@@ -12,8 +12,8 @@ Aggregates several public stuff you post online in a single searchable and subsc
 
 You will need:
 
-- Ruby 2.1+
-- PostgreSQL 9.3+
+- Ruby 2.3+
+- PostgreSQL 9.4+
 - Redis 2.8+
 
 Clone the repo and create a `.env` file with values for your environment (use `.env.example` as a starting point, changing the values where needed).
